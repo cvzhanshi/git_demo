@@ -1,9 +1,16 @@
 import React,{Component} from 'react'
 class Login extends Component {
-    render(props){
+                
+
+    tange=(path)=>{
+        this.props.history.push(`/user${path}`)
+    }
+    render(){
         return (
             <div>
-                这里是用户界面
+                <button onClick={this.tange.bind(this,'/add')}>添加</button>
+                <button onClick={this.tange.bind(this,'/del')}>删除</button>
+                <button onClick={this.tange.bind(this,'/updateUser')}>修改</button>
                 {this.props.children}
             </div>
         )

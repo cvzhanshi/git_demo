@@ -1,9 +1,12 @@
 import React,{Component} from 'react'
 class Login extends Component {
+    taggle=(path)=>{
+        this.props.history.push(path)
+    }
     render(){
         return (
             <div>
-                这里是登录
+                <button onClick={this.taggle.bind(this,'/user')}>登录成功</button>
             </div>
         )
     }

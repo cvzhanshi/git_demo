@@ -4,18 +4,20 @@ import  App from  './App'
 import Login  from  './pages/login'
 import User from  './pages/user'
 import UpdateUser from './pages/updateUser'
+import Admindel from './pages/admin_del'
 class RootRouter extends Component{
     render(){
         return (
             <App>
                 <HashRouter>
+
                 <Switch>
-                    <Redirect exact from='/' to='/user'></Redirect> 
+                    <Redirect exact from='/' to='/login'></Redirect> 
                     <Route path='/login' component={Login}></Route>
                     
-                    {/* <Route exact path='/user' component={User}></Route>
-                    <Route exact path='/user/updateUser' component={UpdateUser}></Route> */}
-                    <Route path='/user' 
+                    <Route exact path='/user' component={User}></Route>
+                    <Route exact path='/user/updateUser' component={UpdateUser}></Route>
+                    {/* <Route path='/user' 
                         children={()=>{
                             return(
                                 <User>
@@ -24,8 +26,10 @@ class RootRouter extends Component{
                             )
                         }
                         }
-                    ></Route>
+                    ></Route> */}
+                    <Route exact path='/user/del' component={Admindel}></Route>
               </Switch>
+                    
                 </HashRouter>
             </App>
         )
