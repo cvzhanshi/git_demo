@@ -1,9 +1,12 @@
 import React from 'react';
-function App(){
+
+function App(props) {
   return (
-    <div>
-      <h3>react-redux</h3>
+    <div className="App">
+     {props.children}
+    
     </div>
-  )
+  );
 }
+
 export default App;
