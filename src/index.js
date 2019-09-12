@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import Router  from './router'
 //index.js文件
 // import Store from './react-redux-store/store'
