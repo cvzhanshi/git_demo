@@ -5,6 +5,7 @@ import Login  from  './pages/login'
 import User from  './pages/user'
 import UpdateUser from './pages/updateUser'
 import Admindel from './pages/admin_del'
+import Add from "./pages/add"
 class RootRouter extends Component{
     render(){
         return (
@@ -14,7 +15,7 @@ class RootRouter extends Component{
                 <Switch>
                     <Redirect exact from='/' to='/login'></Redirect> 
                     <Route path='/login' component={Login}></Route>
-                    
+                    <Route exact path='/user/add' component={Add}></Route>
                     <Route exact path='/user' component={User}></Route>
                     <Route exact path='/user/updateUser' component={UpdateUser}></Route>
                     {/* <Route path='/user' 
